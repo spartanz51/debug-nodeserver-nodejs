@@ -1,0 +1,290 @@
+{
+  "uid": "a0449c07-8f6b-48c0-bb69-e7ef82f9252c",
+  "type": "nanograph",
+  "meta": {
+    "name": "Volted Workflow",
+    "version": "1.0.0"
+  },
+  "graph": {
+    "grid": {
+      "large": 100,
+      "small": 10,
+      "show": true,
+      "snap": false
+    },
+    "zoom": 0.9556203940458781,
+    "positionX": -52.84619086356744,
+    "positionY": -30.678515978733085
+  },
+  "nodes": [
+    {
+      "id": 2,
+      "uid": "debug-node",
+      "version": "1.0.0",
+      "inputs": [
+        {
+          "name": "dummy_alpha",
+          "type": "string"
+        },
+        {
+          "name": "dummy_bravo",
+          "type": "string"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "dummy_charlie",
+          "type": "string"
+        }
+      ],
+      "params": [],
+      "pos": [
+        745,
+        120
+      ],
+      "size": [
+        256,
+        146
+      ],
+      "muted": false,
+      "active": true,
+      "serverPackageId": "debug-nodejs-server",
+      "serverUid": "c6de8b6e-af68-44f5-bb14-ae8af0004361"
+    },
+    {
+      "id": 3,
+      "uid": "text-input",
+      "version": "1.0.0",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "params": [
+        {
+          "name": "text",
+          "type": "text",
+          "value": "toto"
+        }
+      ],
+      "pos": [
+        209,
+        88
+      ],
+      "size": [
+        256,
+        120
+      ],
+      "serverPackageId": "default-node-server",
+      "serverUid": "a3c6132b-649d-447d-84cc-92a8318ad849"
+    },
+    {
+      "id": 5,
+      "uid": "text-input",
+      "version": "1.0.0",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "params": [
+        {
+          "name": "text",
+          "type": "text",
+          "value": "hey"
+        }
+      ],
+      "pos": [
+        7,
+        534
+      ],
+      "size": [
+        256,
+        120
+      ],
+      "serverPackageId": "default-node-server",
+      "serverUid": "a3c6132b-649d-447d-84cc-92a8318ad849"
+    },
+    {
+      "id": 6,
+      "uid": "debug-node",
+      "version": "1.0.0",
+      "inputs": [
+        {
+          "name": "dummy_alpha",
+          "type": "string"
+        },
+        {
+          "name": "dummy_bravo",
+          "type": "string"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "dummy_charlie",
+          "type": "string"
+        }
+      ],
+      "params": [],
+      "pos": [
+        320,
+        337
+      ],
+      "size": [
+        256,
+        146
+      ],
+      "muted": false,
+      "active": true,
+      "serverPackageId": "debug-nodejs-server",
+      "serverUid": "c6de8b6e-af68-44f5-bb14-ae8af0004361"
+    },
+    {
+      "id": 7,
+      "uid": "text-probe-client",
+      "version": "1.0.0",
+      "inputs": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "outputs": [],
+      "params": [
+        {
+          "name": "maxLength",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "fontSize",
+          "type": "select",
+          "value": "medium",
+          "options": [
+            {
+              "value": "medium",
+              "label": "Medium"
+            }
+          ]
+        }
+      ],
+      "pos": [
+        862,
+        498
+      ],
+      "size": [
+        300,
+        250
+      ],
+      "muted": false,
+      "active": true,
+      "serverPackageId": "default-node-server",
+      "serverUid": "volted-client-node"
+    },
+    {
+      "id": 8,
+      "uid": "debug-node",
+      "version": "1.0.0",
+      "inputs": [
+        {
+          "name": "dummy_alpha",
+          "type": "string"
+        },
+        {
+          "name": "dummy_bravo",
+          "type": "string"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "dummy_charlie",
+          "type": "string"
+        }
+      ],
+      "params": [],
+      "pos": [
+        445,
+        622
+      ],
+      "size": [
+        256,
+        146
+      ],
+      "muted": false,
+      "active": true,
+      "serverPackageId": "debug-nodejs-server",
+      "serverUid": "c6de8b6e-af68-44f5-bb14-ae8af0004361"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "link": [
+        3,
+        "text",
+        2,
+        "dummy_alpha"
+      ]
+    },
+    {
+      "id": 4,
+      "link": [
+        6,
+        "dummy_charlie",
+        2,
+        "dummy_bravo"
+      ]
+    },
+    {
+      "id": 7,
+      "link": [
+        5,
+        "text",
+        6,
+        "dummy_alpha"
+      ]
+    },
+    {
+      "id": 8,
+      "link": [
+        5,
+        "text",
+        6,
+        "dummy_bravo"
+      ]
+    },
+    {
+      "id": 10,
+      "link": [
+        5,
+        "text",
+        8,
+        "dummy_bravo"
+      ]
+    },
+    {
+      "id": 11,
+      "link": [
+        2,
+        "dummy_charlie",
+        8,
+        "dummy_alpha"
+      ]
+    },
+    {
+      "id": 12,
+      "link": [
+        8,
+        "dummy_charlie",
+        7,
+        "text"
+      ]
+    }
+  ],
+  "last_node_id": 8,
+  "last_link_id": 12
+}
